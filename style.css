@@ -1,0 +1,368 @@
+
+/* DISEÑO DE LA PÁGINA DE RUBI Y MICHELL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fff1f3;
+    color: #81515e;
+    text-align: center;
+}
+
+/* PORTADA */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(
+        135deg,
+        #fff1f3,
+        #f8dce3,
+        #fff9f4
+    );
+}
+
+h1 {
+    font-size: 42px;
+    color: #b76e83;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #a66c7a;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* CORAZÓN DECORATIVO */
+
+.corazon {
+    font-size: 55px;
+    margin: 20px;
+}
+
+/* BOTÓN */
+
+button {
+    background: #d58da0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b76e83;
+    transform: scale(1.05);
+}
+
+/* GALERÍA DE RECUERDOS */
+
+.galeria {
+    padding: 70px 20px;
+    background: #fff9f7;
+}
+
+.galeria h1 {
+    font-size: 35px;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.foto {
+    background: white;
+    padding: 15px;
+    width: 270px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #e8cbd1;
+}
+
+.foto img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.foto h2 {
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+.foto p {
+    font-size: 15px;
+}
+
+/* SECCIÓN DE LA CARTA */
+
+.carta {
+    padding: 70px 20px;
+    background: #fce8ed;
+    text-align: center;
+}
+
+.carta h1 {
+    font-size: 32px;
+}
+
+.mensaje-carta {
+    display: none;
+    max-width: 650px;
+    margin: 35px auto 0;
+    padding: 35px 25px;
+    background: #fffaf5;
+    border: 2px solid #e9c5ce;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #e8cbd1;
+    animation: aparecer 1s ease;
+}
+
+.mensaje-carta.visible {
+    display: block;
+}
+
+.mensaje-carta h2 {
+    color: #b76e83;
+    margin: 15px 0;
+}
+
+.mensaje-carta p {
+    color: #81515e;
+    font-size: 17px;
+    line-height: 2;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* OCULTAR LA CARTA HASTA PRESIONAR EL BOTÓN */
+
+
+/* CARTA OCULTA HASTA PRESIONAR EL BOTÓN */
+
+.mensaje-carta {
+    display: none;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 35px 25px;
+    background: #fffaf5;
+    border: 2px solid #e9c5ce;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #e8cbd1;
+}
+
+.mensaje-carta.visible {
+    display: block;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* SECCIÓN DE MÚSICA */
+.musica {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px 20px;
+    max-width: 650px;
+    background: #fffaf5;
+    border: 2px solid #e9c5ce;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #e8cbd1;
+}
+
+.musica h2 {
+    color: #b76e79;
+    margin-bottom: 15px;
+}
+
+.musica p {
+    color: #8c626b;
+    margin-bottom: 20px;
+}
+
+.musica audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* CUPÓN CON APARIENCIA DE BOLETO */
+.cupon-tarjeta {
+    position: relative;
+    max-width: 550px;
+    margin: 30px auto;
+    background: #fffaf7;
+    border: 2px solid #d9a6b2;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px #e8cbd1;
+    color: #805965;
+}
+
+.cupon-encabezado,
+.cupon-pie {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #f8e5e9;
+    color: #a56878;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.cupon-contenido {
+    padding: 30px 22px;
+    border-top: 2px dashed #d9a6b2;
+    border-bottom: 2px dashed #d9a6b2;
+    text-align: center;
+}
+
+.cupon-subtitulo {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #b76e79;
+}
+
+.cupon-contenido h3 {
+    color: #a56878;
+    font-size: 25px;
+    margin: 18px 0;
+}
+
+.cupon-contenido p {
+    line-height: 1.8;
+}
+
+.cupon-pie {
+    background: #fff5f6;
+    font-size: 10px;
+}
+
+/* TRES COSAS QUE AMO DE TI */
+.tarjetas-amor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta-amor {
+    background: #fff5f6;
+    border: 2px solid #efcbd4;
+    border-radius: 18px;
+    padding: 20px 12px;
+    width: 220px;
+    box-shadow: 0 5px 15px #ead1d6;
+}
+
+.tarjeta-amor button {
+    background: #fce4eb;
+    border: none;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    font-size: 45px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.tarjeta-amor button:hover {
+    transform: scale(1.12);
+}
+
+.tarjeta-amor > p:first-of-type {
+    color: #b76e79;
+    font-weight: bold;
+}
+
+
+/* RAZONES OCULTAS */
+.tarjeta-amor .respuesta-amor {
+    display: none !important;
+    color: #805965;
+    line-height: 1.6;
+}
+
+.tarjeta-amor .respuesta-amor.visible {
+    display: block !important;
+    animation: aparecer 0.8s ease;
+}
+
+/* MENSAJE FINAL */
+.final-amor {
+    background: #fff5f6;
+    border-radius: 25px;
+    border: 2px solid #efcbd4;
+    box-shadow: 0 5px 20px #e8cbd1;
+}
+
+.final-amor p {
+    color: #805965;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 15px auto;
+}
+
+.final-corazon {
+    font-size: 42px;
+    color: #d9879d;
+    animation: latir 1.2s infinite;
+}
+
+@keyframes latir {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .tarjeta-amor {
+        width: 85%;
+    }
+}
